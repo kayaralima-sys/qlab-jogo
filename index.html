@@ -9,6 +9,28 @@
 </style>
 </head>
 <body>
+  <!-- MÚSICA DE AVENTURA DO Q-LAB -->
+<audio id="musicaQlab" loop preload="auto">
+  <source src="aventura-espacial.mp3" type="audio/mpeg">
+</audio>
+
+<div style="position:fixed;bottom:15px;right:15px;
+z-index:99999;background:#102344;color:white;
+padding:12px;border-radius:15px;">
+  <button onclick="document.getElementById('musicaQlab').play()">
+    🎵 Música
+  </button>
+  <button onclick="document.getElementById('musicaQlab').pause()">
+    ⏸ Pausar
+  </button>
+  <input type="range" min="0" max="100" value="20"
+    aria-label="Volume da música"
+    oninput="document.getElementById('musicaQlab').volume=this.value/100">
+</div>
+
+<script>
+  document.getElementById('musicaQlab').volume = 0.2;
+</script>
 <header><h1>🧪 Q-LAB — Exploradores da Química</h1><div class="actions"><a class="button" href="https://www.canva.com/design/DAHUC9WUlNc/JmnV3rOveZdW-_ZnzrWwRQ/view" target="_blank" rel="noopener noreferrer">Abrir jogo em tela inteira ↗</a><a class="button secondary" href="https://owl-qfrt91.my.canva.site/" target="_blank" rel="noopener noreferrer">Abrir site original ↗</a></div></header>
 <main><div class="embed"><iframe title="Q-LAB — jogo original do Canva" loading="eager" src="https://www.canva.com/design/DAHUC9WUlNc/JmnV3rOveZdW-_ZnzrWwRQ/view?embed" allowfullscreen allow="fullscreen"></iframe></div></main>
 <footer>Jogo original incorporado pelo código oficial do Canva. Se não carregar, use <a href="https://www.canva.com/design/DAHUC9WUlNc/JmnV3rOveZdW-_ZnzrWwRQ/view" target="_blank" rel="noopener noreferrer">Abrir jogo em tela inteira</a>.</footer>
