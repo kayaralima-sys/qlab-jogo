@@ -19,8 +19,16 @@ z-index:99999;background:#102344;color:white;
 padding:12px;border-radius:15px;">
   <button onclick="document.getElementById('musicaQlab').play()">
     🎵 Música
-  </button>
-  <button onclick="document.getElementById('musicaQlab').pause()">
+<button onclick="
+  const musica = document.getElementById('musicaQlab');
+  musica.muted = false;
+  musica.volume = 0.8;
+  musica.play()
+    .then(() => alert('Música iniciada!'))
+    .catch(erro => alert('Erro: ' + erro.message));
+">
+  🎵 Testar música
+</button>
     ⏸ Pausar
   </button>
   <input type="range" min="0" max="100" value="20"
