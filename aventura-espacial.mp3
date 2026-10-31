@@ -1,1 +1,11 @@
+<audio id="musica-qlab" loop>
+  <source src="aventura-espacial.mp3" type="audio/mpeg">
+</audio>
 
+<button onclick="document.getElementById('musica-qlab').play()">
+  🎵 Iniciar música
+</button>
+
+<button onclick="document.getElementById('musica-qlab').pause()">
+  ⏸ Pausar música
+</button>
